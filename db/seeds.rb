@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+def init_attendees
+  10.times do |attendee|
+    Attendee.create(
+      name: "Attendee #{attendee}"
+    )
+  end
+
+  puts '10 attendees added'
+end
+
+init_attendees
