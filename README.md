@@ -1,7 +1,24 @@
-# README
+# Attendance
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This :point_down: device in Ruby on Rails.
+
+![Attendance Device Image](readme_assets/image_1.png)
+
+## TODO
+- [x] CRUD Attendee
+- [ ] Attendance Check-in/Check-out
+- [ ] Tolerate missing check-out
+- [ ] Attendee report
+- [ ] System admin
+- [ ] Export Attendance
+
+## README
+
+```bash
+bundle install
+rails db:setup && rails db:migrate
+rails s
+```
 
 Things you may want to cover:
 
