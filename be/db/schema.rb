@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_22_111103) do
+ActiveRecord::Schema.define(version: 2021_02_22_130624) do
+  create_table "attendances", force: :cascade do |t|
+    t.datetime "start"
+    t.datetime "end"
+    t.integer "attendee_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["attendee_id"], name: "index_attendances_on_attendee_id"
+  end
+
   create_table "attendees", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+
+  add_foreign_key "attendances", "attendees"
 end
